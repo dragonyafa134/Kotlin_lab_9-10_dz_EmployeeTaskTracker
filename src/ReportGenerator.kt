@@ -2,7 +2,16 @@
 //    abstract fun generateReport(): String
 //}
 //
-//class Employee(val name: String, val position : String){
+//class Employee(val name: String, val position : String, var currentTask: Task? = null){
+//    fun assignTask(newTask: Task) {
+//        if (currentTask != null && currentTask.isCompleted) {
+//            println("Сотрудник уже занят задачей \"${currentTask!!.name}\"")
+//        } else {
+//            currentTask = newTask
+//            println("Задача \"${newTask.name}\" назначена сотруднику $name")
+//        }
+//    }
+
 //    fun generateReport(): String {
 //        return """
 //            Информация о сотруднике:
@@ -26,3 +35,10 @@
 //        println("-----")
 //    }
 //}
+
+
+
+
+
+
+
