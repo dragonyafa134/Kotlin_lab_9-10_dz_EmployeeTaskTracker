@@ -22,6 +22,11 @@ fun hadleResult(result: NetworkResult){
         is NetworkResult.Success -> {
             println("Успех ${result.data}")
         }
+        is ModuleResuit.ResourceProduced ->
+            println("Произведено ${result.resorceName} ${result.amount}")
+        is ModuleResuit.NotEnoughResources ->
+            println("Недостаточно ${result.resourceName}" + "Нужно ${result.available}"
+            )
         is NetworkResult.Error -> {
             println("Ошибка ${result.code} ${result.message}")
         }

@@ -9,5 +9,16 @@ fun main(){
         println("${payment.type} ${payment.card.take(4)}")
         val result = processor.pay(payment)
         processor.show(result)
+
     }
+
+    val generatorR = generator.performAction(manager)
+    val labR = lab.performAction(manager)
+
+    handleModuleResulr(generatorR)
+    handleModuleResulr(labR)
+
+    println()
+    manager.printAll()
+
 }
